@@ -13,6 +13,7 @@ system_packages.managers = ["pacman"]
 "pacman:fzf" = "latest"
 "pacman:mise" = "latest"
 "pacman:usage" = "latest"
+"pacman:tldr" = "latest"
 "pacman:fastfetch" = "latest"
 "pacman:dua-cli" = "latest"
 "pacman:neovim" = "latest"
