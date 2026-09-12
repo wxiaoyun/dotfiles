@@ -31,6 +31,7 @@ source "${XDG_CONFIG_HOME}/shell/zim.sh"
 source "${XDG_CONFIG_HOME}/shell/alias.sh"
 source "${XDG_CONFIG_HOME}/shell/fzf.sh"
 source "${XDG_CONFIG_HOME}/shell/init.zsh"
+export PATH="$HOME/.local/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

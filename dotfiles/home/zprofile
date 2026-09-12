@@ -3,3 +3,5 @@
 [ -s "${XDG_CONFIG_HOME}/shell/platform.zprofile" ] && source "${XDG_CONFIG_HOME}/shell/platform.zprofile"
 
 eval "$(mise activate zsh --shims)"
+
+export PATH="$HOME/.local/bin:$PATH"
