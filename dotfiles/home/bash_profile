@@ -1,19 +1,7 @@
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-  # include .bashrc if it exists
-  if [ -f "$HOME/.bashrc" ]; then
-    . "$HOME/.bashrc"
-  fi
-fi
+# Login shells
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ]; then
-  PATH="$HOME/bin:$PATH"
-fi
+source "$HOME/.config/shell/env.sh"
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ]; then
-  PATH="$HOME/.local/bin:$PATH"
-fi
+[ -s "${XDG_CONFIG_HOME}/shell/platform.zprofile" ] && source "${XDG_CONFIG_HOME}/shell/platform.zprofile"
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(mise activate bash --shims)"
