@@ -15,10 +15,6 @@ Add structured logging at fallible boundaries proactively.
 - **Searchable fields:** Include `job_id`, `target`, `stage`, `error`, `status`, and `api_status`.
 - **Name the stage:** Use explicit identifiers like `fetch_sql` or `dedup_get`.
 
-## Commit Messages
-
-- **No co-authors.** Never include `Co-Authored-By` lines or co-author metadata.
-
 ## Shell Use
 
 - Run all commands non-interactively.
