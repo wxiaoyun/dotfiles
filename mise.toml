@@ -33,6 +33,7 @@ cache_prune_age = "7d"
 "~/.tmux.conf" = "dotfiles/home/tmux.conf"
 "~/.agents" = { source = "dotfiles/agents", mode = "symlink-each" }
 "~/.claude" = { source = "dotfiles/claude", mode = "copy" }
+"~/.codex" = { source = "dotfiles/agents", mode = "copy" }
 "~/.local/bin" = { source = "dotfiles/local-bin", mode = "symlink-each" }
 "~/.config" = { source = "dotfiles/config", mode = "symlink-each", exclude = [
   "nvim",
@@ -63,8 +64,7 @@ description = "Install shared agent skills and Pi packages"
 depends = ["os-bootstrap"]
 run = [
   { task = "setup-harness-peripherals" },
-  { task = "add-universal-skills" },
-  { task = "add-claude-plugin" },
+  { task = "add-skills" },
   { task = "add-pi-extension" },
 ]
 
@@ -72,23 +72,25 @@ run = [
 run = """
 rtk init -g --agent pi
 herdr integration install pi
+
 rtk init -g --agent claude
 herdr integration install claude
+claude plugin marketplace add DietrichGebert/ponytail
+claude plugin install ponytail@ponytail
+
+rtk init -g --codex
+herdr integration install codex
+codex plugin marketplace add DietrichGebert/ponytail
+codex plugin add ponytail@ponytail
 """
 
-[tasks.add-universal-skills]
+[tasks.add-skills]
 env.AGENTS = "universal claude-code"
 env.AGENT_SKILLS = """
 JuliusBrussee/caveman --skill caveman
 mattpocock/skills --skill research --skill domain-modeling --skill grilling --skill grill-with-docs --skill to-spec --skill tdd --skill implement --skill code-review
 """
 file = "{{ cwd }}/scripts/add-agent-skills.sh"
-
-[tasks.add-claude-plugin]
-run = """
-claude plugin marketplace add DietrichGebert/ponytail
-claude plugin install ponytail@ponytail
-"""
 
 [tasks.add-pi-extension]
 env.PI_PACKAGES = """
