@@ -93,7 +93,7 @@ claude plugin install ponytail@ponytail
 [tasks.add-pi-extension]
 env.PI_PACKAGES = """
 npm:pi-web-access
-git:github.com/wxiaoyun/pi-herdr-subagents
+git:github.com/wxiaoyun/herdr-agents
 npm:@juicesharp/rpiv-ask-user-question
 git:github.com/DietrichGebert/ponytail
 """
