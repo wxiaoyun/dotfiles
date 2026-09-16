@@ -77,6 +77,8 @@ rtk init -g --agent claude
 herdr integration install claude
 claude plugin marketplace add DietrichGebert/ponytail
 claude plugin install ponytail@ponytail
+claude plugin marketplace add jarrodwatts/claude-hud
+claude plugin install claude-hud
 
 rtk init -g --codex
 herdr integration install codex
