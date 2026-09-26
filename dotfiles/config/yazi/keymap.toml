@@ -1,0 +1,4 @@
+[[mgr.prepend_keymap]]
+on   = "<Enter>"
+run  = "plugin cd-quit"
+desc = "Quit and cd into hovered directory, or open the file"

@@ -11,6 +11,7 @@ system_packages.managers = ["pacman"]
 "pacman:bat" = "latest"
 "pacman:jq" = "latest"
 "pacman:fzf" = "latest"
+"pacman:yazi" = "latest"
 "pacman:mise" = "latest"
 "pacman:usage" = "latest"
 "pacman:tldr" = "latest"
