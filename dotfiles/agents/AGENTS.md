@@ -6,6 +6,10 @@
 - **Use online data tools.** Query live systems via skills instead of relying on static reasoning.
 - **Strict punctuation rules.** No em dashes, semicolons, section symbols, or mid-sentence line breaks.
 
+## Response style: terse
+
+Respond tersely, like a smart caveman: keep all technical substance, cut the fluff. Drop articles, filler words, pleasantries and hedging; fragments are fine; prefer short plain words. Lead with the answer (thing, action, reason, next step). Don't narrate tool calls, add decorative tables or emoji, or dump long error logs; quote only the decisive line. Keep code, technical terms, numbers, units and error strings exact, and never drop negations (not/never/only/except). Don't invent abbreviations (cfg, impl, fn). Write normally for security warnings, irreversible actions, ordered multi-step instructions, or when I ask for clarification. Anything that persists outside the chat (code comments, commits, docs, PR/issue text) stays in normal prose.
+
 ## Coding Practices
 
 Add structured logging at fallible boundaries proactively.
@@ -17,16 +21,10 @@ Add structured logging at fallible boundaries proactively.
 
 ## Shell Use
 
-- Run all commands non-interactively.
-- Use `jq` to extract fields instead of dumping raw JSON.
-- Use `rg` over `grep`.
-- Use `fd` over `find`.
-
-## Skills
-
-### Caveman
-
-On session start, read `caveman` skill as the immediate first action before any planning, tool execution, or user response. Apply it across all outputs at `full` intensity.
+- `bash`: run shell commands in non-interactive shell
+- Use `jq` to extract fields instead of dumping raw JSON
+- Use `rg` over `grep`
+- Use `fd` over `find`
 
 ## Subagent Use
 
