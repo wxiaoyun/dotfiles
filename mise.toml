@@ -17,7 +17,6 @@ cache_prune_age = "7d"
 "brew:fastfetch" = "latest"
 "brew:dua-cli" = "latest"
 "brew:herdr" = "latest"
-"brew:rtk" = "latest"
 "brew:neovim" = "latest"
 "brew:node" = "latest"
 "brew:python@3.14" = "latest"
@@ -71,18 +70,15 @@ run = [
 
 [tasks.setup-harness-peripherals]
 run = """
-rtk init -g --agent pi
 herdr integration install pi
-
-rtk init -g --agent claude
 herdr integration install claude
-claude plugin marketplace add DietrichGebert/ponytail
-claude plugin install ponytail@ponytail
+herdr integration install codex
+
 claude plugin marketplace add jarrodwatts/claude-hud
 claude plugin install claude-hud
 
-rtk init -g --codex
-herdr integration install codex
+claude plugin marketplace add DietrichGebert/ponytail
+claude plugin install ponytail@ponytail
 codex plugin marketplace add DietrichGebert/ponytail
 codex plugin add ponytail@ponytail
 """

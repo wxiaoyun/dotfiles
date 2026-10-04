@@ -32,7 +32,6 @@ description = "Install Arch AUR packages"
 hide = true
 env.AUR_PACKAGES = """
 herdr-bin
-rtk-bin
 claude-code
 pi-coding-agent-bin
 """
