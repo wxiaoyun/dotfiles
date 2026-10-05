@@ -86,7 +86,7 @@ codex plugin add ponytail@ponytail
 [tasks.add-skills]
 env.AGENTS = "universal claude-code"
 env.AGENT_SKILLS = """
-mattpocock/skills --skill research --skill domain-modeling --skill grilling --skill grill-with-docs --skill to-spec --skill tdd --skill implement --skill code-review
+mattpocock/skills --skill research --skill domain-modeling --skill grilling --skill grill-with-docs --skill code-review --skill pr --skill retro
 wxiaoyun/skills --skill tribal-knowledge
 """
 file = "{{ cwd }}/scripts/add-agent-skills.sh"
