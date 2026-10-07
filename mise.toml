@@ -72,15 +72,11 @@ run = [
 run = """
 herdr integration install pi
 herdr integration install claude
-herdr integration install codex
 
 claude plugin marketplace add jarrodwatts/claude-hud
-claude plugin install claude-hud
-
 claude plugin marketplace add DietrichGebert/ponytail
+claude plugin install claude-hud
 claude plugin install ponytail@ponytail
-codex plugin marketplace add DietrichGebert/ponytail
-codex plugin add ponytail@ponytail
 """
 
 [tasks.add-skills]
