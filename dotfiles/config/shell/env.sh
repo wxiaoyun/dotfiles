@@ -9,3 +9,5 @@ export MANPAGER="nvim +Man!"
 if GPG_TTY=$(tty 2>/dev/null); then
   export GPG_TTY
 fi
+
+export CLAUDE_CODE_SHELL=/bin/bash
