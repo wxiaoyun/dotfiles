@@ -9,5 +9,3 @@ export MANPAGER="nvim +Man!"
 if GPG_TTY=$(tty 2>/dev/null); then
   export GPG_TTY
 fi
-
-export ENABLE_PROMPT_CACHING_1H=1
