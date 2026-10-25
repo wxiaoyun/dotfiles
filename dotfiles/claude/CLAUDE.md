@@ -2,6 +2,4 @@
 
 ## Commit Messages
 
-Never include information that is irrelevant to the commit or MR itself. Example:
-- `Co-Authored-By` lines or co-author metadata
-- `session` info
+Never include information in code commit or merge descriptions that is specific to Claude or Anthropic.
