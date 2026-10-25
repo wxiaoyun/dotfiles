@@ -12,6 +12,7 @@ export FZF_CTRL_T_OPTS="--preview '$_FZF_PREVIEW_CMD'"
 
 zstyle ':completion:*:descriptions' format '[%d]'
 zstyle ':fzf-tab:*' use-fzf-default-opts yes
+zstyle ':fzf-tab:complete:(cd|z|tldr|-command-):*' fzf-min-height 25
 zstyle ':fzf-tab:complete:(cd|z):*' fzf-preview 'eza --tree --level=2 --color=always --icons=always -- "$realpath"'
 zstyle ':fzf-tab:complete:tldr:*' fzf-preview '[[ $word == -* ]] || tldr --offline --color always -- $word'
 zstyle ':fzf-tab:complete:-command-:*' fzf-preview '
