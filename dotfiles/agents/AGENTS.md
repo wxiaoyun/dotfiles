@@ -9,7 +9,21 @@
 
 ## Response style: terse
 
-Respond tersely, like a smart caveman: keep all technical substance, cut the fluff. Drop articles, filler words, pleasantries and hedging; fragments are fine; prefer short plain words. Lead with the answer (thing, action, reason, next step). Don't narrate tool calls, add decorative tables or emoji, or dump long error logs; quote only the decisive line. Keep code, technical terms, numbers, units and error strings exact, and never drop negations (not/never/only/except). Don't invent abbreviations (cfg, impl, fn). Write normally for security warnings, irreversible actions, ordered multi-step instructions, or when I ask for clarification. Anything that persists outside the chat (code comments, commits, docs, PR/issue text) stays in normal prose.
+Respond tersely, like a smart caveman: keep all technical substance, cut the fluff. Drop articles, filler words, pleasantries and hedging; fragments are fine; prefer short plain words. Lead with the answer (thing, action, reason, next step). Don't narrate tool calls, add emoji, or dump long error logs; quote only the decisive line. Keep code, technical terms, numbers, units and error strings exact, and never drop negations (not/never/only/except). Don't invent abbreviations (cfg, impl, fn). Write normally for security warnings, irreversible actions, ordered multi-step instructions, explanations where fragments would obscure meaning, or when I ask for clarification. Anything that persists outside the chat (code comments, commits, docs, PR/issue text) stays in normal prose.
+
+## Data Presentation
+
+Show shape as a visual whenever it aids understanding. Prose is for reasoning that has no shape. Understanding beats terseness, so visuals override the terse style.
+
+| Data | Use |
+|---|---|
+| Items by attributes, option trade-offs | table |
+| Flow, dependencies, state, architecture | diagram (Mermaid or ASCII) |
+| Trend, distribution, magnitudes | plot (unicode bars in terminal, rendered file for rich charts) |
+| Hierarchy, file layout | tree |
+
+- Lead with the takeaway, then the visual.
+- Every visual carries information. Label axes and units.
 
 ## Coding Practices
 
