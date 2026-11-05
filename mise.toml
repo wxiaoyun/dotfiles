@@ -60,12 +60,11 @@ hide = true
 run = ":"
 
 [tasks.bootstrap]
-description = "Install shared agent skills and Pi packages"
+description = "Install shared agent peripherals"
 depends = ["os-bootstrap"]
 run = [
   { task = "setup-harness-peripherals" },
   { task = "add-skills" },
-  { task = "add-pi-extension" },
 ]
 
 [tasks.setup-harness-peripherals]
