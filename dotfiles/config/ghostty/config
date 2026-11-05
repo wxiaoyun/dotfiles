@@ -7,7 +7,6 @@ theme = TokyoNight
 background-opacity = 0.9
 background-blur-radius = 20
 
-window-title-font-family = Iosevka Nerd Font Mono
 window-height = 36
 window-width = 120
 
