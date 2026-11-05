@@ -43,7 +43,6 @@ cache_prune_age = "7d"
 "~/.config/nvim" = "dotfiles/config/nvim"
 "~/.config/shell" = { source = "dotfiles/config/shell", mode = "symlink-each" }
 "~/.config/ghostty" = { source = "dotfiles/config/ghostty", mode = "symlink-each" }
-"~/.config/mise/config.toml" = "mise.toml"
 
 [bootstrap.hooks.pre-dotfiles]
 run = """
