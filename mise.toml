@@ -73,6 +73,12 @@ run = """
 herdr integration install pi
 herdr integration install claude
 
+pi install npm:pi-web-access
+pi install git:github.com/wxiaoyun/herdr-agents
+pi install npm:@juicesharp/rpiv-ask-user-question
+pi install git:github.com/DietrichGebert/ponytail
+pi install npm:pi-tidy
+
 claude plugin marketplace add jarrodwatts/claude-hud
 claude plugin marketplace add DietrichGebert/ponytail
 claude plugin install claude-hud
@@ -86,12 +92,3 @@ mattpocock/skills --skill research --skill domain-modeling --skill grilling --sk
 wxiaoyun/skills --skill tribal-knowledge
 """
 file = "{{ cwd }}/scripts/add-agent-skills.sh"
-
-[tasks.add-pi-extension]
-env.PI_PACKAGES = """
-npm:pi-web-access
-git:github.com/wxiaoyun/herdr-agents
-npm:@juicesharp/rpiv-ask-user-question
-git:github.com/DietrichGebert/ponytail
-"""
-file = "{{ cwd }}/scripts/add-pi-extension.sh"
