@@ -1,0 +1,24 @@
+# Sheprd overrides. Saved changes reload automatically.
+# Unset keys inherit config-gpui.toml; tables merge key by key.
+
+# New installs start with the roomy rounded sidebar. Remove this line for
+# the managed default, or pick another layout listed in config-gpui.toml.
+layout = "comfortable-rounded"
+theme = "Follow Herdr"
+
+[terminal]
+family = "Iosevka Nerd Font Mono"
+size = 16.0
+
+[sidebar]
+family = "Iosevka Nerd Font Mono"
+
+[tabs]
+family = "Iosevka Nerd Font Mono"
+
+[status_bar]
+usage = "detailed"
+
+[backdrop]
+opacity = 0.9
+blur = true
