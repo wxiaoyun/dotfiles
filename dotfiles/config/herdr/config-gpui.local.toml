@@ -5,6 +5,7 @@
 # the managed default, or pick another layout listed in config-gpui.toml.
 layout = "comfortable-rounded"
 theme = "Follow Herdr"
+show_repository_icons = false
 
 [terminal]
 family = "Iosevka Nerd Font Mono"
