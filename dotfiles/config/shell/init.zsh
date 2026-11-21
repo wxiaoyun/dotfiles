@@ -2,9 +2,19 @@ eval "$(mise activate zsh)"
 
 eval "$(zoxide init zsh)"
 
-eval "$(herdr completions zsh)"
+if command -v usage >/dev/null 2>&1; then
+    source <(usage g completion-init zsh)
+fi
 
-. "$HOME/.cargo/env"
-eval "$(rustup completions zsh)"
+if command -v herdr >/dev/null 2>&1; then
+    eval "$(herdr completions zsh)"
+fi
 
-source <(usage g completion-init zsh)
+if command -v rustup >/dev/null 2>&1; then
+    . "$HOME/.cargo/env"
+    eval "$(rustup completions zsh)"
+fi
+
+if command -v rex >/dev/null 2>&1; then
+    eval "$(rex completion zsh)"
+fi
