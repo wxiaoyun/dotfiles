@@ -72,7 +72,6 @@ herdr integration install pi
 herdr integration install claude
 
 pi install npm:pi-web-access
-pi install git:github.com/wxiaoyun/herdr-agents
 pi install npm:@juicesharp/rpiv-ask-user-question
 pi install git:github.com/DietrichGebert/ponytail
 pi install npm:pi-tidy
