@@ -13,3 +13,4 @@ fi
 export PATH="$HOME/.elan/bin:$PATH"
 
 export CLAUDE_CODE_SHELL=/bin/bash
+export CLAUDE_CODE_EXPERIMENTAL_CODE_MODE=1
